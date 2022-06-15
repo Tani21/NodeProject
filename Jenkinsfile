@@ -15,7 +15,7 @@ pipeline {
       steps {
         sh 'npm install next-update --save-dev'
         sh 'npm run dep:update'
-        sh './update_dependency.sh'
+       
       }
     }
      
