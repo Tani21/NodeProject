@@ -27,7 +27,7 @@ pipeline {
         steps{
            sh ' npm install -g serve'
            sh 'npm run build'
-           sh 'npm run deploy'
+           sh 'node App.js'
         }
     }
   }
