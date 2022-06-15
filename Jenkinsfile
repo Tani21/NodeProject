@@ -14,6 +14,8 @@ pipeline {
     stage('Install dependencies') {
       steps {
         sh 'npm install'
+        sh 'npm install next-update --save-dev'
+        sh 'npm run dep:update'
       }
     }
      
