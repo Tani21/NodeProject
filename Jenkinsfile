@@ -14,7 +14,7 @@ pipeline {
     stage('Install dependencies') {
       steps {
         sh ''' DIR=".node_modules"
-if [ -d ".node_modules" ]; then
+if [ -d "$DIR" ]; then
   echo "Folder already exists"
 else
   npm install
