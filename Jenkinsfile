@@ -13,7 +13,7 @@ pipeline {
         
     stage('Install dependencies') {
       steps {
-        sh ''' DIR="/etc/httpd/"
+        sh ''' DIR=".node_modules"
 if [ -d ".node_modules" ]; then
   echo "Folder already exists"
 else
