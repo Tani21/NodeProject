@@ -13,8 +13,14 @@ pipeline {
         
     stage('Install dependencies') {
       steps {
-        sh 'npm install next-update --save-dev'
-        sh 'npm run dep:update'
+        sh ''' DIR="/etc/httpd/"
+if [ -d ".node_modules" ]; then
+  ### Take action if $DIR exists ###
+  echo "Folder already exists"
+else
+  npm install
+fi'''
+        
        
       }
     }
