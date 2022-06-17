@@ -15,10 +15,10 @@ pipeline {
       steps {
         sh ''' DIR="/etc/httpd/"
 if [ -d ".node_modules" ]; then
-  ### Take action if $DIR exists ###
   echo "Folder already exists"
 else
   npm install
+  echo "folder does not exist already"
 fi'''
         
        
